@@ -1,3 +1,4 @@
+#include <stdint.h>
 
 
 struct Graphic_interface
@@ -10,5 +11,6 @@ struct Graphic_interface
 
 };
 
-uint32_t display_init(Display *self);
-void display_show_data(Display *self);
+uint32_t display_init(Graphic_interface *self);
+uint32_t* order_and_group_data(Graphic_interface *self);
+void display_show_data(Graphic_interface *self);
